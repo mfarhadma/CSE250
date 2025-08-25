@@ -1,0 +1,25 @@
+// DSCH 2.7a
+// 10/31/2003 7:17:25 PM
+// C:\DSCH2\Export dsch2\fadd.sch
+
+ 1 module fadd( C,B,A,Carry,Sum);
+ 2  input C,B,A;
+ 3  output Carry,Sum;
+ 4  xor #(16) xor2(w4,A,B);
+ 5  nand #(16) nand2(w5,A,C);
+ 6  nand #(16) nand2(w7,B,A);
+ 7  xor #(16) xor2(Sum,w4,C);
+ 8  nand #(16) nand3(Carry,w7,w9,w5);
+ 9  nand #(16) nand2(w9,B,C);
+10 endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 C=~C;
+#2000 B=~B;
+#4000 A=~A;
+
+// Simulation parameters
+// C CLK 10 10
+// B CLK 20 20
+// A CLK 40 40

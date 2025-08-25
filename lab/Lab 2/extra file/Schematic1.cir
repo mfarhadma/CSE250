@@ -1,0 +1,22 @@
+* E:\10th Semester\CSE250\BuX\Lab\Lab 02\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Apr 05 19:10:31 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END

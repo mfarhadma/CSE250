@@ -1,0 +1,31 @@
+VERSION 7/7/2004 4:00:21 PM
+FIG #C:\Documents and Settings\All Users\Documents\Softwares\VLSI Softwares\Export Microwind\example.MSK
+BB(-40,80,-17,131)
+SIMU #50.00
+REC(-40,101,23,30,NW)
+REC(-32,118,6,4,DP)
+REC(-32,109,6,7,DP)
+REC(-25,123,6,6,DN)
+REC(-32,86,6,7,DN)
+REC(-32,80,6,4,DN)
+REC(-23,125,2,2,CO)
+REC(-30,89,2,2,CO)
+REC(-30,111,2,2,CO)
+REC(-39,116,15,2,PO)
+REC(-39,86,2,30,PO)
+REC(-39,84,16,2,PO)
+REC(-25,123,6,6,ME)
+REC(-32,87,6,28,ME)
+REC(-32,116,6,2,DP)
+REC(-32,84,6,2,DN)
+TITLE -22 126  #Vdd
+$1 1000 0 
+TITLE -30 121  #Vdd
+$1 1000 0 
+TITLE -29 81  #Vss
+$0 1000 0 
+TITLE -38 98  #clock1
+$c 1000 0 20.0000 23.0000 43.0000 46.0000 
+TITLE -29 98  #s1
+$v 1000 0 
+FFIG C:\Documents and Settings\All Users\Documents\Softwares\VLSI Softwares\Export Microwind\example.MSK

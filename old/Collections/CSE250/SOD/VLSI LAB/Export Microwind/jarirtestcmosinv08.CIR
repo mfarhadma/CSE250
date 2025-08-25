@@ -1,0 +1,43 @@
+CIRCUIT C:\Export Microwind\jarirtestcmosinv08.MSK
+*
+* IC Technology: CMOS 0.8µm - 2 Metal
+*
+VDD 1 0 DC 5.00
+Vclock1 6 0 PULSE(0.00 5.00 10.00N 3.00N 3.00N 10.00N 26.00N)
+*
+* List of nodes
+* "s1" corresponds to n°4
+* "clock1" corresponds to n°6
+*
+* MOS devices
+MN1 0 6 4 0 N1  W= 2.40U L= 0.80U
+MP1 4 6 1 1 P1  W= 7.60U L= 0.80U
+*
+C2 1 0 22.214fF
+C3 1 0  7.624fF
+C4 4 0 18.771fF
+C6 6 0  1.753fF
+*
+* n-MOS Model 3 :
+* Standard
+.MODEL N1 NMOS LEVEL=3 VTO=0.80 UO=600.000 TOX=20.0E-9
++LD =0.060U THETA=0.180 GAMMA=0.700
++PHI=0.700 KAPPA=0.030 VMAX=130.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* Standard
+.MODEL P1 PMOS LEVEL=3 VTO=-0.80 UO=200.000 TOX=20.0E-9
++LD =-0.050U THETA=0.180 GAMMA=0.450
++PHI=0.700 KAPPA=0.040 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 50.00N
+* (Pspice)
+.PROBE
+.END

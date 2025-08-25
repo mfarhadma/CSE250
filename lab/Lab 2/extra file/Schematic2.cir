@@ -1,0 +1,21 @@
+* C:\Users\mdfar\OneDrive\Desktop\CSE250\Lab 02\Schematic2.sch
+
+* Schematics Version 9.2
+* Tue Jul 06 23:30:29 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Schematic2.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

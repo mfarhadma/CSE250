@@ -1,0 +1,11 @@
+module FADD( A,B,Cin,carry,Sum);
+ input A,B,Cin;
+ output carry,Sum;
+ wire i0w1,i0w2,i0w3,i0w4;
+ xor xor1(Sum,Cin,i0w1);
+ xor xor2(i0w1,B,A);
+ and and1(i0w4,A,Cin);
+ and and2(i0w3,B,A);
+ and and3(i0w2,Cin,B);
+ or or1(carry,i0w2,i0w3,i0w4);
+endmodule

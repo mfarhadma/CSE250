@@ -1,0 +1,43 @@
+CIRCUIT C:\Export Microwind\jarirtest001.MSK
+*
+* IC Technology: CMOS 0.18µm - 6 Metal
+*
+VDD 1 0 DC 2.00
+Vclock1 6 0 PULSE(0.00 2.00 3.95N 0.05N 0.05N 3.95N 8.00N)
+*
+* List of nodes
+* "s1" corresponds to n°4
+* "clock1" corresponds to n°6
+*
+* MOS devices
+MN1 0 6 4 0 N1  W= 0.70U L= 0.60U
+MP1 4 6 1 1 P1  W= 0.70U L= 0.20U
+*
+C2 1 0  2.544fF
+C3 1 0  0.287fF
+C4 4 0  1.045fF
+C6 6 0  0.189fF
+*
+* n-MOS Model 3 :
+* low leakage
+.MODEL N1 NMOS LEVEL=3 VTO=0.50 UO=380.000 TOX= 4.0E-9
++LD =-0.020U THETA=0.200 GAMMA=0.350
++PHI=0.500 KAPPA=0.080 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* low leakage
+.MODEL P1 PMOS LEVEL=3 VTO=-0.60 UO=200.000 TOX= 5.0E-9
++LD =0.010U THETA=0.300 GAMMA=0.400
++PHI=0.200 KAPPA=0.010 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 5.00N
+* (Pspice)
+.PROBE
+.END

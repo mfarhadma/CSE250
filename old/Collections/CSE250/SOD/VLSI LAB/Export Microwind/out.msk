@@ -1,0 +1,25 @@
+// DSCH 2.7a
+// 10/31/2003 7:30:43 PM
+// C:\DSCH2\Export dsch2\jarirfadd.sch
+
+module jarirfadd( A,B,Cin,sum,carry);
+ input A,B,Cin;
+ output sum,carry;
+ xor #(11) xor2(w3,A,B);
+ xor #(11) xor2(sum,w3,Cin);
+ or #(14) or3(carry,w6,w7,w8);
+ and #(11) and2(w6,B,Cin);
+ and #(11) and2(w7,A,B);
+ and #(11) and2(w8,Cin,A);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#100 A=~A;
+#200 B=~B;
+#400 Cin=~Cin;
+
+// Simulation parameters
+// A CLK 10 10
+// B CLK 20 20
+// Cin CLK 40 40
